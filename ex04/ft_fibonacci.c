@@ -6,25 +6,13 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 10:39:13 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/07 12:38:23 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/07 17:27:05 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_fibonacci(int index)
 {
-	if (index < 0)
-		return (-1);
-	int i = 0;
-	int j = 1;
-	int stack = 0;
-	while (index > 0)
-	{	
-	stack += j+i;
-	i += j;
-	j++;
-	index--;
-	}
-	return stack;
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2))
 }
 
 
